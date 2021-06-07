@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+15.times do
+    store = Faker::Vehicle.make
+    coupon_code = Faker::Verb.base
+    Coupon.create(store: store, coupon_code: coupon_code)
+    puts "Created store: #{store} - coupon code: #{coupon_code}"
+end
